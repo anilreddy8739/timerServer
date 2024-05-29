@@ -27,6 +27,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
 app.post("/api/timer", (req, res) => {
   const { endTime, title, timerColor = "rgba(179, 48, 102, 0.973)" } = req.body;
 
